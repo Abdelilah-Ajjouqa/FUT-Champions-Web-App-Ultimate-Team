@@ -1,49 +1,6 @@
-/* @media (min-width: 640px) {
-    body {
-        background-image: url(./src/images/stadium_background.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-clip: border-box; 
-        box-shadow: 0px 0px 10px 0px inset red; 
-        opacity
-    }
-} */
-
-/* btn de navbar */
-/* From Uiverse.io by Ali-Tahmazi99 */ 
-input[type = "checkbox"] {
-    -webkit-appearance: none;
-    display: none;
-    visibility: hidden;
-  }
-  
-  .bar {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    width: 25px;
-    height: 37px;
-  }
-  
-  .bar span {
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background: #f1faee;
-    border-radius: 100px;
-    display: inline-block;
-    transition: 0.3s ease;
-    left: 0;
-  }
-  
-  .bar span.top {
-    top: 0;
-  }
-  
-  .bar span.middle {
-    top: 17px;
-  }
-  
-  .bar span.bottom {
-    bottom: 0;
-  }
+.lineup {
+  background-image: url(./src/images/lineup.jpeg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
