@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +8,65 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./tailwind.config.js">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./src/js/script.js" defer></script>
     <title>FUT Champions | Web App Ultimate Team</title>
 </head>
+
 <body class="bg-slate-800 opacity-90">
 
     <header class="mb-24">
         <div class="fixed top-0 w-full">
             <nav class="bg-slate-950 shadow-lg flex flex-nowrap justify-between px-6 py-3.5 md:py-5">
-                <a href="#"><h1 class="text-3xl text-white">EA FC 25</h1></a>
-                <button class="text-white border px-3 rounded-full hover:bg-red-500 hover:border-0"><i class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i></button>
+                <a href="#">
+                    <h1 class="text-3xl text-white">EA FC 25</h1>
+                </a>
+                <button class="text-white border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
+                        class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i></button>
             </nav>
         </div>
     </header>
+    
+    <div class="my-10">
+        <p class="text-white text-3xl shadow-sm text-center">EA FC 25 Tactics & Formations</p>
+    </div>
 
-    <main>
-        <div class="my-10">
-           <p class="text-white text-3xl shadow-sm text-center">EA FC 25 Tactics & Formations</p>
-        </div>
+    <main class="grid grid-cols-2">
 
-        <div class="lineup grid grid-rows-4 box-border w-full h-[960px] py-[20%]">
+        <section class="bg-[url(./src/images/download.svg)] bg-center bg-contain bg-no-repeat py-10 flex justify-center">
+            <div class="grid grid-rows-4 gap-11 box-border w-[95%]">
 
-            <div class="flex justify-around px-2">
-                <div class="h-[50%] w-[18%] bg-red-500"></div>
-                <div class="h-[50%] w-[18%] bg-red-500"></div>
+                <div class="flex justify-around h-24 mt-3">
+                    <div class="w-[18%] bg-orange-500 rounded-lg text-xs shadow-lg">ST</div>
+                    <div class="w-[18%] bg-orange-500 rounded-lg text-xs shadow-lg">ST</div>
+                </div>
+
+                <div class="flex justify-evenly h-24">
+                    <div class="w-[18%] bg-red-500 rounded-lg text-xs shadow-lg">LM</div>
+                    <div class="w-[18%] bg-gray-500 rounded-lg text-xs shadow-lg">CM</div>
+                    <div class="w-[18%] bg-gray-500 rounded-lg text-xs shadow-lg">CM</div>
+                    <div class="w-[18%] bg-red-500 rounded-lg text-xs shadow-lg">RM</div>
+                </div>
+
+                <div class="flex justify-around h-24">
+                    <div class="w-[18%] bg-red-500 rounded-lg text-xs shadow-lg">LB</div>
+                    <div class="w-[18%] bg-blue-500 rounded-lg text-xs shadow-lg">CB</div>
+                    <div class="w-[18%] bg-blue-500 rounded-lg text-xs shadow-lg">CB</div>
+                    <div class="w-[18%] bg-red-500 rounded-lg text-xs shadow-lg">RB</div>
+                </div>
+
+                <div class="flex justify-around h-24">
+                    <div class="w-[18%] bg-red-500 rounded-lg text-xs shadow-lg">GK</div>
+                </div>
+
             </div>
+        </section>
 
-            <div class="flex justify-around px-2">
-                <div class="h-[50%] w-[18%] bg-red-500"></div>
-                <div class="h-[50%] w-[18%] bg-gray-500"></div>
-                <div class="h-[50%] w-[18%] bg-gray-500"></div>
-                <div class="h-[50%] w-[18%] bg-red-500"></div>
+        <section>
+            <div>
+                 
             </div>
-
-            <div class="flex justify-around px-2">
-                <div class="h-[50%] w-[18%] bg-red-500"></div>
-                <div class="h-[50%] w-[18%] bg-blue-500"></div>
-                <div class="h-[50%] w-[18%] bg-blue-500"></div>
-                <div class="h-[50%] w-[18%] bg-red-500"></div>
-            </div>
-
-            <div class="flex justify-around">
-                <div class="h-[50%] w-[18%] bg-red-500 mt-16"></div>
-            </div>
-        </div>
+        </section>
     </main>
 </body>
+
 </html>

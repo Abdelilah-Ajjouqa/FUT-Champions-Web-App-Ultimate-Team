@@ -1,6 +1,7 @@
-.lineup {
+/* .lineup {
   background-image: url(./src/images/lineup.jpeg);
   height: 100vh;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-}
+  background-position: center;
+} */
