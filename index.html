@@ -20,6 +20,11 @@
                 <a href="#">
                     <h1 class="text-3xl text-white">EA FC 25</h1>
                 </a>
+                <div class="flex items-center">
+                    <input class="w-20 pl-3 rounded-full border-2 border-gray-300" type="text" placeholder="Search">
+                    <button class="text-white px-3 rounded-full hover:bg-red-500 hover:border-0"><i
+                            class="fa-solid fa-search"></i></button>
+                </div>
                 <button class="text-white border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
                         class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i></button>
             </nav>
@@ -35,28 +40,28 @@
             <div class="terrain">
             <div class="terain">
 
-                <div class="attack">
-                    <div class="attack-player player-before">ST</div>
-                    <div class="attack-player player-before">ST</div>
-                </div>
+                <button class="attack">
+                    <div class="player attack-player player-before">ST</div>
+                    <div class="player attack-player player-before">ST</div>
+                </button>
 
-                <div class="middle">
-                    <div class="middle-player player-before">LM</div>
-                    <div class="middle-player player-before">CM</div>
-                    <div class="middle-player player-before">CM</div>
-                    <div class="middle-player player-before">RM</div>
-                </div>
+                <button class="middle">
+                    <div class="player middle-player player-before">LM</div>
+                    <div class="player middle-player player-before">CM</div>
+                    <div class="player middle-player player-before">CM</div>
+                    <div class="player middle-player player-before">RM</div>
+                </button>
 
-                <div class="deffense">
-                    <div class="deffense-player player-before">LB</div>
-                    <div class="deffense-player player-before">CB</div>
-                    <div class="deffense-player player-before">CB</div>
-                    <div class="deffense-player player-before">RB</div>
-                </div>
+                <button class="deffense">
+                    <div class="player deffense-player player-before">LB</div>
+                    <div class="player deffense-player player-before">CB</div>
+                    <div class="player deffense-player player-before">CB</div>
+                    <div class="player deffense-player player-before">RB</div>
+                </button>
 
-                <div class="gk">
-                    <div class="gk-player player-before"><p>Gk</p></div>
-                </div>
+                <button class="gk">
+                    <div class="player gk-player player-before"><p>Gk</p></div>
+                </button>
 
             </div>    
             </div>
@@ -65,16 +70,22 @@
 
         <section class="reserve-players">           
             <div class="players">
-                <div class="player-before-re"></div>
-                <div class="player-before-re"></div>
-                <div class="player-before-re"></div>
-                <div class="player-before-re"></div>
-                <div class="player-before-re"></div>
-                <div class="player-before-re"></div>
-                <div class="player-before-re"></div>
+                <button class="player player-before-re"></button>
+                <button class="player player-before-re"></button>
+                <button class="player player-before-re"></button>
+                <button class="player player-before-re"></button>
+                <button class="player player-before-re"></button>
+                <button class="player player-before-re"></button>
+                <button class="player player-before-re"></button>
             </div>
         </section>
     </main>
+    <form>
+        <div>
+            <label for="name"></label>
+            <input type="text" name="name" placeholder="Enter a name of player">
+        </div>
+    </form>
 </body>
 
 </html>
