@@ -17,16 +17,31 @@
     <header class="mb-24">
         <div class="fixed top-0 w-full">
             <nav class="bg-slate-950 shadow-lg flex flex-nowrap justify-between px-6 py-3.5 md:py-5">
-                <a href="#">
-                    <h1 class="text-3xl text-white">EA FC 25</h1>
-                </a>
                 <div class="flex items-center">
-                    <input class="w-20 pl-3 rounded-full border-2 border-gray-300" type="text" placeholder="Search">
+                    <a href="#">
+                        <h1 class="text-3xl text-white">EA FC 25</h1>
+                    </a>
+                </div>
+
+                <div class="flex items-center">
+                    <input class="w-[80%] h-9 pl-3 rounded-full border-2 border-gray-300" type="text" placeholder="Search">
                     <button class="text-white px-3 rounded-full hover:bg-red-500 hover:border-0"><i
                             class="fa-solid fa-search"></i></button>
                 </div>
-                <button class="text-white border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
-                        class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i></button>
+
+                <div class="flex items-center">
+                    <select id="formationSelect" class="w-50% p-2 rounded">
+                        <option value="4-4-2">4-4-2</option>
+                        <option value="4-3-3">4-3-3</option>
+                    </select>
+                </div> 
+
+                <div class="flex items-center">
+                    <button class="text-white h-10 border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
+                        class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+                
             </nav>
         </div>
     </header>
@@ -41,26 +56,26 @@
             <div class="terain">
 
                 <button class="attack">
-                    <div class="player attack-player player-before">ST</div>
-                    <div class="player attack-player player-before">ST</div>
+                    <div class="player-infos attack-player player-before">ST</div>
+                    <div class="player-infos attack-player player-before">ST</div>
                 </button>
 
                 <button class="middle">
-                    <div class="player middle-player player-before">LM</div>
-                    <div class="player middle-player player-before">CM</div>
-                    <div class="player middle-player player-before">CM</div>
-                    <div class="player middle-player player-before">RM</div>
+                    <div class="player-infos middle-player player-before">LM</div>
+                    <div class="player-infos middle-player player-before">CM</div>
+                    <div class="player-infos middle-player player-before">CM</div>
+                    <div class="player-infos middle-player player-before">RM</div>
                 </button>
 
                 <button class="deffense">
-                    <div class="player deffense-player player-before">LB</div>
-                    <div class="player deffense-player player-before">CB</div>
-                    <div class="player deffense-player player-before">CB</div>
-                    <div class="player deffense-player player-before">RB</div>
+                    <div class="player-infos deffense-player player-before">LB</div>
+                    <div class="player-infos deffense-player player-before">CB</div>
+                    <div class="player-infos deffense-player player-before">CB</div>
+                    <div class="player-infos deffense-player player-before">RB</div>
                 </button>
 
                 <button class="gk">
-                    <div class="player gk-player player-before"><p>Gk</p></div>
+                    <div class="player-infos gk-player player-before"><p>Gk</p></div>
                 </button>
 
             </div>    
@@ -70,22 +85,30 @@
 
         <section class="reserve-players">           
             <div class="players">
-                <button class="player player-before-re"></button>
-                <button class="player player-before-re"></button>
-                <button class="player player-before-re"></button>
-                <button class="player player-before-re"></button>
-                <button class="player player-before-re"></button>
-                <button class="player player-before-re"></button>
-                <button class="player player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
+                <button class="player-infos player-before-re"></button>
             </div>
         </section>
     </main>
-    <form>
-        <div>
-            <label for="name"></label>
-            <input type="text" name="name" placeholder="Enter a name of player">
-        </div>
-    </form>
+
+    <section class="hidden">
+    <div class="bg-slate-700 bg-opacity-90 backdrop-blur-sm player-form mx-auto my-2 fixed top-20 left-11 w-[90%] h-[90%] flex justify-center">
+        <h2 class="text-white text-3xl mb-4">Add Player</h2>
+        <form id="addPlayerForm" class="w-[70%] flex flex-col items-center">
+            <input type="text" id="playerName" placeholder="Player Name" class="w-full p-2 rounded" required>
+            <input type="text" id="playerPosition" placeholder="Position (e.g., ST, CM)" class="w-full p-2 rounded" required>
+            <input type="number" id="playerRating" placeholder="Rating (1-100)" class="w-full p-2 rounded" required>
+            <button type="submit" class="bg-blue-500 text-white p-2 rounded">Add Player</button>
+        </form>
+    </div>    
+    </section>
+    
+
 </body>
 
 </html>

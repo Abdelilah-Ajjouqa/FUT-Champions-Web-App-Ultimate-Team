@@ -135,3 +135,40 @@ main {
   background-repeat: no-repeat;
   color: white;
 }
+
+/* forme */
+.player-form, .formation-selection {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & input, select, button {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  & button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+  }
+
+  & button:hover {
+    background-color: #2980b9;
+  }
+}
+
+/* .player-infos {
+  background-image: url(./src/images/player.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100px;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+} */
