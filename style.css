@@ -89,7 +89,7 @@ main {
 .players {
   box-sizing: border-box;
   display: grid;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
