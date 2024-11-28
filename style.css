@@ -162,13 +162,13 @@ main {
   }
 }
 
-/* .player-infos {
+.player-infos {
   background-image: url(./src/images/player.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100px;
+  height: 90px;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
-} */
+}
