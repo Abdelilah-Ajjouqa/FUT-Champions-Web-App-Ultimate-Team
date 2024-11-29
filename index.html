@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="./tailwind.config.js">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./src/js/script.js" defer></script>
@@ -127,7 +128,12 @@
             
         </section>
 
-        <section class="reserve-players">           
+<div class="reserve-players">
+        <div class="players">
+            <!-- Player cards will be added here -->
+        </div>
+    </div>
+        <!-- <section class="reserve-players">           
             <div class="players">
 
                 <button class="player-before-re hover:scale-125 hover:duration-300">
@@ -158,17 +164,26 @@
                     <div class="mt-5 player-infos"></div>
                 </button>
 
-                <!-- <button id="especialy" class="player-before-re hover:scale-125 hover:duration-300"></button> -->
             </div>
-        </section>
+        </section> -->
     </main>
+
+    
 
     <section id="addForme" class="hidden flex fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40">
         <div class="bg-slate-700 bg-opacity-90 backdrop-blur-sm player-form w-[80%] h-[30%] md:w-[70%] md:h-[65%] lg:w-[50%] lg:h-[70%] justify-center">
         <h2 class="text-white text-3xl mb-4">Add Player</h2>
         <form id="addPlayerForm" class="w-[70%] md:w-[80%] lg:w-[70%] flex flex-col items-center">
             <input type="text" id="playerName" placeholder="Player Name" class="w-full p-2 rounded" required>
-            <input type="text" id="playerPosition" placeholder="Position (e.g., ST, CM)" class="w-full p-2 rounded" required>
+            <!-- <input type="text" id="playerPosition" placeholder="Position (e.g., ST, CM)" class="w-full p-2 rounded" required> -->
+            <select id="playerPosition" class="w-full p-2 rounded">
+                <option value="ST">ST</option>
+                <option value="CM">CM</option>
+                <option value="CB">CB</option>
+                <option value="LB">LB</option>
+                <option value="RB">RB</option>
+                <option value="GK">GK</option>
+            </select>
             <input type="number" id="playerRating" placeholder="Rating (1-100)" class="w-full p-2 rounded" required>
             <div class="flex justify-evenly w-full">
                 <button type="submit" class="bg-blue-500 text-white p-2 rounded">Add Player</button>
@@ -177,7 +192,7 @@
         </form>
     </div>    
     </section>
-    
+
 </body>
 
 </html>

@@ -1,17 +1,58 @@
-const api = `https://fut.codia-dev.com/players.json`
+const api = `https://fut.codia-dev.com/players.json`;
+let allPlayers = [];
 
 const players = async () => {
     const response = await fetch(api);
     const data = await response.json();
-    console.log(data)
+    allPlayers = data;
+    displayAllPlayers(allPlayers);
 }
-players();
 
+function displayAllPlayers(players) {
+    const reservePlayersContainer = document.querySelector(".reserve-players .players");
+    players.forEach(player => {
+        const cartPlayer = createPlayerCard(player);
+        reservePlayersContainer.appendChild(cartPlayer);
+    });
+}
+
+function createPlayerCard(playerInfo) {
+    const cartPlayer = document.createElement('div');
+    cartPlayer.className = "player-card player-before-re";
+    cartPlayer.innerHTML = `
+        <div class="mx-auto text-sm">${playerInfo.position}</div>
+    `;
+    cartPlayer.addEventListener('click', () => showPlayerPopup(playerInfo));
+    return cartPlayer;
+}
+
+function showPlayerPopup(playerInfo) {
+    const popup = document.createElement('div');
+    popup.className = 'player-popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <h2>${playerInfo.name}</h2>
+            <p>Position: ${playerInfo.position}</p>
+            <p>Rating: ${playerInfo.rating}</p>
+            ${playerInfo.club ? `<p>Club: ${playerInfo.club}</p>` : ''}
+            ${playerInfo.nationality ? `<p>Nationality: ${playerInfo.nationality}</p>` : ''}
+            <button id="closePopup">Close</button>
+        </div>
+    `;
+    document.body.appendChild(popup);
+
+    const closeButton = popup.querySelector('#closePopup');
+    closeButton.addEventListener('click', () => {
+        document.body.removeChild(popup);
+    });
+}
+
+players();
 // btn add new player
 const btnAddPlayer = document.getElementById('addNewPlayer');
 btnAddPlayer.addEventListener('click', () => {
     document.querySelector("#addForme").classList.remove('hidden');
-})
+});
 
 const returnAddPlayer = document.getElementById('removeFormeAddNewPlayer');
 returnAddPlayer.addEventListener('click', () => {
@@ -33,42 +74,24 @@ formAddNewPlayer.addEventListener('submit', (e) => {
         id: Date.now(),
         name: playerName.value,
         position: playerPosition.value,
-        rating: parseInt(playerRating.value), //to return just numbers
+        rating: parseInt(playerRating.value),
     }
     playerCart.push(playerInfo);
 
     displayCart(playerInfo);
 
     document.getElementById("addForme").classList.add('hidden');
-}) 
 
-    // display player cart
+    // Clear form
+    playerName.value = '';
+    playerPosition.value = '';
+    playerRating.value = '';
+});
+// display player cart
 function displayCart(playerInfo) {
-    let background;
-    let reservePlayersContainer = document.querySelector(".reserve-players .players");
-
-    if (playerInfo.rating > 0 && playerInfo.rating <= 50) {
-        background = "url(./src/images/badge_gold.webp)";
-    } else if (playerInfo.rating >= 51 && playerInfo.rating <= 74) {
-        background = "url(./src/images/badge_total_rush.webp)";
-    } else if (playerInfo.rating >= 75 && playerInfo.rating <= 99) {
-        background = "url(./src/images/players_background.webp)";
+    const reservePlayersContainer = document.querySelector(".reserve-players .players");
+    if (playerInfo.rating) {
+        const cartPlayer = createPlayerCard(playerInfo);
+        reservePlayersContainer.appendChild(cartPlayer);
     }
-
-    const cartPlayer = document.createElement('div');
-    cartPlayer.className = "mt-5 player-infos py-10";
-    cartPlayer.style.backgroundImage = background;
-    cartPlayer.style.backgroundSize = "cover";
-    cartPlayer.style.backgroundPosition = "center";
-    cartPlayer.style.width = "100px";
-    cartPlayer.style.height = "130px";
-    cartPlayer.style.position = "relative";
-
-    cartPlayer.innerHTML = `
-        <p class="text-sm absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">${playerInfo.rating}</p>
-        <p class="text-xs absolute bottom-2 left-1/2 transform -translate-x-1/2 text-center text-white">${playerInfo.name}</p>
-        <p class="text-xs absolute top-2 left-1/2 transform -translate-x-1/2 text-center text-white">${playerInfo.position}</p>
-    `;
-
-    reservePlayersContainer.appendChild(cartPlayer);
 }
