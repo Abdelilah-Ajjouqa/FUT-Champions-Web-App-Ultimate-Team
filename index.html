@@ -12,6 +12,7 @@
     <script src="./src/js/script.js" defer></script>
     <title>FUT Champions | Web App Ultimate Team</title>
 </head>
+
 <body class="bg-slate-800 opacity-90">
 
     <header class="mb-24">
@@ -24,7 +25,8 @@
                 </div>
 
                 <div class="flex items-center">
-                    <input class="w-[80%] h-9 pl-3 rounded-full border-2 border-gray-300" type="text" placeholder="Search">
+                    <input class="w-[80%] h-9 pl-3 rounded-full border-2 border-gray-300" type="text"
+                        placeholder="Search">
                     <button class="text-white px-3 rounded-full hover:bg-red-500 hover:border-0"><i
                             class="fa-solid fa-search"></i></button>
                 </div>
@@ -34,14 +36,15 @@
                         <option value="4-4-2">4-4-2</option>
                         <option value="4-3-3">4-3-3</option>
                     </select>
-                </div> 
+                </div>
 
                 <div class="flex items-center">
-                    <button id="addNewPlayer" class="text-white h-10 border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
-                        class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i>
+                    <button id="addNewPlayer"
+                        class="text-white h-10 border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
+                            class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i>
                     </button>
                 </div>
-                
+
             </nav>
         </div>
     </header>
@@ -53,86 +56,85 @@
     <main>
         <section class="all">
             <div class="terrain">
-            <div class="terain">
+                <div class="terain">
 
-                <div class="attack">
-                    <button class="attack-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">ST</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="attack-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">ST</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
+                    <div class="attack">
+                        <button class="attack-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">ST</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="attack-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">ST</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                    </div>
+
+                    <div class="middle">
+
+                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">LM</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">CM</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">CM</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">RM</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                    </div>
+
+                    <div class="deffense">
+                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">LB</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">CB</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">CB</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">RB</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                    </div>
+
+                    <div class="gk">
+                        <button class="gk-player player-before hover:scale-125 hover:duration-300">
+                            <div class="mx-auto text-sm">Gk</div>
+                            <div class="player-infos"></div>
+                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                        </button>
+                    </div>
+
                 </div>
-
-                <div class="middle">
-
-                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">LM</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">CM</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">CM</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">RM</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                </div>
-
-                <div class="deffense">
-                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">LB</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">CB</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">CB</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">RB</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                </div>
-
-                <div class="gk">
-                    <button class="gk-player player-before hover:scale-125 hover:duration-300">
-                        <div class="mx-auto text-sm">Gk</div>
-                        <div class="player-infos"></div>
-                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                    </button>
-                </div>
-
-            </div>    
             </div>
-            
+
         </section>
 
-<div class="reserve-players">
+        <!-- <div class="reserve-players">
         <div class="players">
-            <!-- Player cards will be added here -->
         </div>
-    </div>
+    </div> -->
         <!-- <section class="reserve-players">           
             <div class="players">
 
@@ -168,29 +170,53 @@
         </section> -->
     </main>
 
-    
+    <section id="addForme"
+        class="hidden flex fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40">
+        <div
+            class="bg-slate-700 bg-opacity-90 backdrop-blur-sm player-form w-[80%] h-[30%] md:w-[70%] md:h-[65%] lg:w-[50%] lg:h-[70%] justify-center">
+            <h2 class="text-white text-3xl mb-4">Add Player</h2>
+            <form id="addPlayerForm" class="w-[70%] md:w-[80%] lg:w-[70%] flex flex-col items-center">
+                <input type="text" id="playerName" placeholder="Player Name" class="w-full p-2 rounded" required>
+                <select id="playerPosition" class="w-full p-2 rounded">
+                    <option value="ST">ST</option>
+                    <option value="CM">CM</option>
+                    <option value="CB">CB</option>
+                    <option value="LB">LB</option>
+                    <option value="RB">RB</option>
+                    <option value="GK">GK</option>
+                </select>
+                <input type="number" id="playerRating" placeholder="Rating (1-100)" class="w-full p-2 rounded" required>
+                <div class="flex justify-evenly w-full">
+                    <button type="submit" class="bg-blue-500 text-white p-2 rounded">Add Player</button>
+                    <button id="removeFormeAddNewPlayer" class="text-white p-2 rounded">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
-    <section id="addForme" class="hidden flex fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40">
-        <div class="bg-slate-700 bg-opacity-90 backdrop-blur-sm player-form w-[80%] h-[30%] md:w-[70%] md:h-[65%] lg:w-[50%] lg:h-[70%] justify-center">
-        <h2 class="text-white text-3xl mb-4">Add Player</h2>
-        <form id="addPlayerForm" class="w-[70%] md:w-[80%] lg:w-[70%] flex flex-col items-center">
-            <input type="text" id="playerName" placeholder="Player Name" class="w-full p-2 rounded" required>
-            <!-- <input type="text" id="playerPosition" placeholder="Position (e.g., ST, CM)" class="w-full p-2 rounded" required> -->
-            <select id="playerPosition" class="w-full p-2 rounded">
-                <option value="ST">ST</option>
-                <option value="CM">CM</option>
-                <option value="CB">CB</option>
-                <option value="LB">LB</option>
-                <option value="RB">RB</option>
-                <option value="GK">GK</option>
-            </select>
-            <input type="number" id="playerRating" placeholder="Rating (1-100)" class="w-full p-2 rounded" required>
-            <div class="flex justify-evenly w-full">
-                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Add Player</button>
-                <button id="removeFormeAddNewPlayer" class="text-white p-2 rounded">Cancel</button>
-            </div>
+    <section class="">
+        <form class="grid md:grid-cols-3 lg:grid-cols-4">
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p>XXXXXX</p>
+                    <p>CF</p>
+            </ul>
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p>XXXXXX</p>
+                    <p>CF</p>
+            </ul>
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p>XXXXXX</p>
+                    <p>CF</p>
+            </ul>
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p>XXXXXX</p>
+                    <p>CF</p>
+            </ul>
         </form>
-    </div>    
     </section>
 
 </body>
