@@ -1,13 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="./tailwind.config.js">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <script src="./src/js/script.js" defer></script>
+    <title>FUT Champions | Web App Ultimate Team</title>
 </head>
-<body>
+<body class="bg-slate-800 opacity-90">
+
+    <header class="mb-24">
+        <div class="fixed top-0 w-full">
+            <nav class="bg-slate-950 shadow-lg flex flex-nowrap justify-between px-6 py-3.5 md:py-5">
+                <div class="flex items-.classList.add('hidden');er">
+                    <a href="#">
+                        <h1 class="text-3xl text-white">EA FC 25</h1>
+                    </a>
+                </div>
+
+                <div class="flex items-center">
+                    <input class="w-[80%] h-9 pl-3 rounded-full border-2 border-gray-300" type="text" placeholder="Search">
+                    <button class="text-white px-3 rounded-full hover:bg-red-500 hover:border-0"><i
+                            class="fa-solid fa-search"></i></button>
+                </div>
+
+                <div class="flex items-center">
+                    <select id="formationSelect" class="w-50% p-2 rounded">
+                        <option value="4-4-2">4-4-2</option>
+                        <option value="4-3-3">4-3-3</option>
+                    </select>
+                </div> 
+
+                <div class="flex items-center">
+                    <button id="addNewPlayer" class="text-white h-10 border px-3 rounded-full hover:bg-red-500 hover:border-0"><i
+                        class="fa-solid fa-plus"></i>&nbsp;<i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="my-10">
+        <p class="titre">EA FC 25 Tactics & Formations</p>
+    </div>
+
+    <main>
+        <section class="all">
+            <div class="terrain">
+            <div class="terain">
+
+                <div class="attack">
+                    <button class="attack-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">ST</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="attack-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">ST</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                </div>
+
+                <div class="middle">
+
+                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">LM</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">CM</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">CM</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">RM</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                </div>
+
+                <div class="deffense">
+                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">LB</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">CB</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">CB</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                    <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">RB</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                </div>
+
+                <div class="gk">
+                    <button class="gk-player player-before hover:scale-125 hover:duration-300">
+                        <div class="mx-auto text-sm">Gk</div>
+                        <div class="player-infos"></div>
+                        <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
+                    </button>
+                </div>
+
+            </div>    
+            </div>
+            
+        </section>
+
+<div class="reserve-players">
+        <div class="players">
+            <!-- Player cards will be added here -->
+        </div>
+    </div>
+        <!-- <section class="reserve-players">           
+            <div class="players">
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+                <button class="player-before-re hover:scale-125 hover:duration-300">
+                    <div class="mt-5 player-infos"></div>
+                </button>
+
+            </div>
+        </section> -->
+    </main>
+
     
+
+    <section id="addForme" class="hidden flex fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40">
+        <div class="bg-slate-700 bg-opacity-90 backdrop-blur-sm player-form w-[80%] h-[30%] md:w-[70%] md:h-[65%] lg:w-[50%] lg:h-[70%] justify-center">
+        <h2 class="text-white text-3xl mb-4">Add Player</h2>
+        <form id="addPlayerForm" class="w-[70%] md:w-[80%] lg:w-[70%] flex flex-col items-center">
+            <input type="text" id="playerName" placeholder="Player Name" class="w-full p-2 rounded" required>
+            <!-- <input type="text" id="playerPosition" placeholder="Position (e.g., ST, CM)" class="w-full p-2 rounded" required> -->
+            <select id="playerPosition" class="w-full p-2 rounded">
+                <option value="ST">ST</option>
+                <option value="CM">CM</option>
+                <option value="CB">CB</option>
+                <option value="LB">LB</option>
+                <option value="RB">RB</option>
+                <option value="GK">GK</option>
+            </select>
+            <input type="number" id="playerRating" placeholder="Rating (1-100)" class="w-full p-2 rounded" required>
+            <div class="flex justify-evenly w-full">
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Add Player</button>
+                <button id="removeFormeAddNewPlayer" class="text-white p-2 rounded">Cancel</button>
+            </div>
+        </form>
+    </div>    
+    </section>
+
 </body>
+
 </html>
