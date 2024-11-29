@@ -48,6 +48,7 @@ function showPlayerPopup(playerInfo) {
 }
 
 players();
+
 // btn add new player
 const btnAddPlayer = document.getElementById('addNewPlayer');
 btnAddPlayer.addEventListener('click', () => {
@@ -87,6 +88,8 @@ formAddNewPlayer.addEventListener('submit', (e) => {
     playerPosition.value = '';
     playerRating.value = '';
 });
+
+
 // display player cart
 function displayCart(playerInfo) {
     const reservePlayersContainer = document.querySelector(".reserve-players .players");

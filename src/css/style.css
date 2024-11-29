@@ -29,7 +29,7 @@ main {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   justify-content: center;
-  background-image: url(./src/images/download.svg);
+  background-image: url(../images/download.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -115,7 +115,7 @@ main {
   width: 10rem;
   font-size: 0.75rem;
   line-height: 1rem;
-  background-image: url(./src/images/players_background.webp);
+  background-image: url(../images/players_background.webp);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,7 +131,7 @@ main {
   width: 10rem;
   font-size: 0.75rem;
   line-height: 1rem;
-  background-image: url(./src/images/players_background.webp);
+  background-image: url(../images/players_background.webp);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -165,7 +165,7 @@ main {
 }
 
 .player-infos {
-  background-image: url(./src/images/player.png);
+  background-image: url(../images/player.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -186,7 +186,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(./src/images/player.png);
+  background-image: url(../images/player.png);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
