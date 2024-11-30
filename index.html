@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="./tailwind.config.js">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./src/js/script.js" defer></script>
+    <script src="./src/js/app.js" defer></script>
     <title>FUT Champions | Web App Ultimate Team</title>
 </head>
 
 <body class="bg-slate-800 opacity-90">
 
-    <header class="mb-24">
-        <div class="fixed top-0 w-full">
-            <nav class="bg-slate-950 shadow-lg flex flex-nowrap justify-between px-6 py-3.5 md:py-5">
-                <div class="flex items-.classList.add('hidden');er">
+    <header class="mb-32 md:mb-24 lg:mb-16">
+        <div class="fixed top-0 w-full header">
+            <nav class="bg-slate-950 shadow-lg flex flex-nowrap justify-between px-6 py-3.5 md:py-5 nav">
+                <div class="flex items-center">
                     <a href="#">
                         <h1 class="text-3xl text-white">EA FC 25</h1>
                     </a>
@@ -49,9 +49,6 @@
         </div>
     </header>
 
-    <div class="my-10">
-        <p class="titre">EA FC 25 Tactics & Formations</p>
-    </div>
 
     <main>
         <section class="all">
@@ -59,12 +56,12 @@
                 <div class="terain">
 
                     <div class="attack">
-                        <button class="attack-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="attack-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">ST</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="attack-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="attack-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">ST</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
@@ -72,23 +69,22 @@
                     </div>
 
                     <div class="middle">
-
-                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="middle-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">LM</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="middle-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">CM</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="middle-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">CM</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="middle-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="middle-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">RM</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
@@ -96,22 +92,22 @@
                     </div>
 
                     <div class="deffense">
-                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="deffense-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">LB</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="deffense-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">CB</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="deffense-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">CB</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
                         </button>
-                        <button class="deffense-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="deffense-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">RB</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
@@ -119,7 +115,7 @@
                     </div>
 
                     <div class="gk">
-                        <button class="gk-player player-before hover:scale-125 hover:duration-300">
+                        <button onclick="playerToChanging()" class="gk-player player-before hover:scale-105 hover:duration-300">
                             <div class="mx-auto text-sm">Gk</div>
                             <div class="player-infos"></div>
                             <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
@@ -135,7 +131,7 @@
         <div class="players">
         </div>
     </div> -->
-        <!-- <section class="reserve-players">           
+        <section class="reserve-players">           
             <div class="players">
 
                 <button class="player-before-re hover:scale-125 hover:duration-300">
@@ -167,7 +163,7 @@
                 </button>
 
             </div>
-        </section> -->
+        </section>
     </main>
 
     <section id="addForme"
@@ -194,31 +190,40 @@
         </div>
     </section>
 
-    <section class="">
-        <form class="grid md:grid-cols-3 lg:grid-cols-4">
-            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
-                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
-                    <p>XXXXXX</p>
-                    <p>CF</p>
-            </ul>
-            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
-                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
-                    <p>XXXXXX</p>
-                    <p>CF</p>
-            </ul>
-            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
-                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
-                    <p>XXXXXX</p>
-                    <p>CF</p>
-            </ul>
-            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px]">
-                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
-                    <p>XXXXXX</p>
-                    <p>CF</p>
-            </ul>
-        </form>
-    </section>
+    <div id="popup">
 
+    </div>
+    <!-- <section id="playersChanging" class="hidden fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40 p-16">
+        <form class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-5/6 mx-auto bg-slate-700 rounded-md backdrop-blur-sm">
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px] mx-auto hover:scale-110 hover:duration-300">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <div class="leading-[19px]">
+                        <p class="text-nowrap text-ellipsis overflow-hidden mx-auto w-16">XXXXXX</p>
+                        <p>75 &nbsp;CF &nbsp;<i class="fa-solid fa-globe" style="color: #fff;"></i></p>
+                    </div>
+            </ul>
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px] mx-auto hover:scale-110 hover:duration-300">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p class="text-nowrap text-ellipsis overflow-hidden mx-auto w-16">XXXXXX</p>
+                    <p>CF</p>
+            </ul>
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px] mx-auto hover:scale-110 hover:duration-300">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p class="text-nowrap text-ellipsis overflow-hidden mx-auto w-16">XXXXXX</p>
+                    <p>CF</p>
+            </ul>
+            <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px] mx-auto hover:scale-110 hover:duration-300">
+                <li class="bg-[url(./src/images/player.png)] bg-center bg-no-repeat bg-contain w-40 h-[90px]"></li>
+                    <p class="text-nowrap text-ellipsis overflow-hidden mx-auto w-16">XXXXXX</p>
+                    <p>CF</p>
+            </ul>
+        </form>    
+        <div class="w-5/6 mx-auto flex justify-evenly my-3">
+            <button id="saveChangement" type="submit" class="border border-black px-4 py-0.5 rounded-md bg-yellow-600 text-white bg-opacity-90 shadow-lg shadow-gray-500 hover:scale-110 hover:duration-300 hover:bg-red-500 hover:opacity-100">Save</button>
+            <button id="cancelChagement" class="border border-black px-4 py-0.5 rounded-md bg-yellow-600 text-white bg-opacity-90 shadow-lg shadow-gray-500 hover:scale-110 hover:duration-300 hover:bg-red-500 hover:opacity-100">Cancel</button>    
+        </div>
+        
+    </section> -->
 </body>
 
 </html>
