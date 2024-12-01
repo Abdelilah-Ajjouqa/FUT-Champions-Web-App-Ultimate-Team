@@ -48,124 +48,226 @@
             </nav>
         </div>
     </header>
-
-
     <main>
-        <section class="all">
+
+        <section class="players-in-terrain">
             <div class="terrain">
                 <div class="terain">
 
                     <div class="attack">
-                        <button id="toChange" class="attack-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">ST</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="attack-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">ST</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
+                        <div id ="toChange" data-position="ST" 
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="player-card">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+                        <div id ="toChange" data-position="RF"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="middle">
-                        <button id="toChange" class="middle-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">LM</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="middle-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">CM</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="middle-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">CM</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="middle-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">RM</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
+                        <div id ="toChange" data-position="LW"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+
+                        <div id ="toChange" data-position="CM"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+
+                        <div id ="toChange" data-position="CM"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+
+                        <div id ="toChange" data-position="RW"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="deffense">
-                        <button id="toChange" class="deffense-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">LB</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="deffense-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">CB</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="deffense-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">CB</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
-                        <button id="toChange" class="deffense-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">RB</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
+                        <div id ="toChange" data-position="CM"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+
+                        <div id ="toChange" data-position="CM"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+
+                        <div id ="toChange" data-position="CM"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+
+                        <div id ="toChange" data-position="CM"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="gk">
-                        <button id="toChange" class="gk-player player-before hover:scale-105 hover:duration-300">
-                            <div class="mx-auto text-sm">Gk</div>
-                            <div id="toBeChanged" class="player-infos"></div>
-                            <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">000 &nbsp;MAR</div>
-                        </button>
+                        <div 
+                        data-position="GK"
+                        id ="toChange"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
 
-        <!-- <div class="reserve-players">
-        <div class="players">
-        </div>
-    </div> -->
-        <section class="reserve-players">           
+        <section class="overflow-scroll md:overflow-auto">
             <div class="players">
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
-                <button id="toChange" class="player-before-re hover:scale-125 hover:duration-300">
-                    <div class="mt-5 player-infos"></div>
-                </button>
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
+
+                <div
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(../images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                    </div>
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                        <div class="text-xs text-center text-white">CM &nbsp;&nbsp; 90</div>
+                    </div>
+                </div>
 
             </div>
         </section>
-    </main>
 
+    </main>
+    <div
+    id="popupPlayers"
+    class="bg-white hidden w-[80%] mx-auto p-5 rounded shadow-lg max-h-[80vh] overflow-y-auto relative">
+    <div class="flex items-center justify-end"><button onclick="closePopupPlayers()">Cancel</button></div>
+    </div>
     <section id="addForme"
         class="hidden flex fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40">
         <div
@@ -189,9 +291,8 @@
             </form>
         </div>
     </section>
-
     <div id="popup" class="hidden fixed inset-0 flex justify-center items-center bg-black/50 z-50"></div>
-
+    
     <!-- <section id="playersChanging" class="hidden fixed w-full h-full top-0 left-0 justify-center items-center backdrop-blur-sm bg-black/40 p-16">
         <form class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-5/6 mx-auto bg-slate-700 rounded-md backdrop-blur-sm">
             <ul class="bg-[url(./src/images/players_background.webp)] bg-no-repeat bg-center bg-contain w-40 h-40 text-white text-center pt-[10px] mx-auto hover:scale-110 hover:duration-300">
@@ -222,7 +323,8 @@
             <button id="cancelChagement" class="border border-black px-4 py-0.5 rounded-md bg-yellow-600 text-white bg-opacity-90 shadow-lg shadow-gray-500 hover:scale-110 hover:duration-300 hover:bg-red-500 hover:opacity-100">Cancel</button>    
         </div>
         
-    </section> -->
+    </section>
+     -->
 </body>
 
 </html>

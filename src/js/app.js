@@ -1,5 +1,6 @@
 const api = 'https://fut.codia-dev.com/players.json';
 let playersData = [];
+let popupPlayers = document.getElementById("popupPlayers");
 
 fetch(api)
     .then(response => response.json())
@@ -43,13 +44,15 @@ const filterPlayersPopup = (position, buttonClicked) => {
             // toChange.classList.remove("player-infos");
             
                 buttonClicked.innerHTML = `
-                    <div class="mx-auto text-sm">${player.position}</div>
-                    <div class="player-infos">
-                        <img src="${player.photo}" alt="${player.name}" class="w-12 h-12 rounded-full">
+                    <div id="toChange"
+                    class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                    <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(${player.photo})] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
                     </div>
-                    <div class="player-stat relative text-slate-200 text-sm mx-auto top-28">
-                        ${player.rating} &nbsp;${player.name}
+                    <div class="leading-[15px]">
+                        <div class="text-ellipsis w-16 text-nowrap overflow-hidden">${player.name}</div>
+                        <div class="text-xs text-center text-white">${player.position} &nbsp;&nbsp; ${player.rating}</div>
                     </div>
+                </div>
                 `;
                 popupContainer.classList.add("hidden");
             });
@@ -71,16 +74,41 @@ const filterPlayersPopup = (position, buttonClicked) => {
     popupContainer.classList.remove("hidden");
 };
 
+const appendPlayer = (button)=>{
+    console.log(button)
+    console.log(button.id)
+    const position = button.getAttribute("data-position");
+    const filteredPlayers = playersData.filter(player => player.position === position);
+    console.log(filteredPlayers)
+    popupPlayers.classList.remove("hidden");
+
+    filteredPlayers.forEach(player => {
+        const playerCard = document.createElement("div");
+        playerCard.className = "flex items-center p-3 border-b border-gray-300 cursor-pointer hover:bg-gray-100";
+
+        playerCard.innerHTML = `
+            <img src="${player.photo}" alt="${player.name}" class="w-12 h-12 rounded-full mr-4" />
+            <div class="flex-1">
+                <h3 class="text-sm font-bold">${player.name}</h3>
+                <p class="text-gray-600 text-sm">Position: ${player.position}</p>
+                <p class="text-gray-600 text-sm">Rating: ${player.rating}</p>
+            </div>
+        `;
+        popupPlayers.appendChild(playerCard);
+})
+
+}
+
+const closePopupPlayers = () => {
+    popupPlayers.classList.add("hidden")
+}
+
 // Add click events to terrain and reserve buttons
 const addPlayerSelectionEvents = () => {
     document.querySelectorAll("#toChange").forEach(button => {
         button.addEventListener("click", () => {
-            const position = button.querySelector(".text-sm")?.innerText;
-            if (position) {
-                filterPlayersPopup(position, button);
-            } else {
-                console.error("Position not found for clicked button.");
-            }
+                // filterPlayersPopup(button);
+                appendPlayer(button);
         });
     });
 };
