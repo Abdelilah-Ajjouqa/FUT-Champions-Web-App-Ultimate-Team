@@ -4,22 +4,24 @@ let chosingPlayers = [];
 let popupPlayers = document.getElementById("popupPlayers");
 
 fetch("/players.json")
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
         playersData = data.players || [];
     })
-    .catch(error => {
+    .catch((error) => {
         console.error("Error fetching players data:", error);
     });
 
 // popup players
-const appendPlayer = (button, playerSelected) => {
+const appendPlayer = (button) => {
     const position = button.getAttribute("data-position");
-    const filteredPlayers = playersData.filter(player => player.position === position);
+    const filteredPlayers = playersData.filter(
+        (player) => player.position === position
+    );
 
-    popupPlayers.innerHTML = ""; 
+    popupPlayers.innerHTML = "";
 
-    console.log(filteredPlayers);
+    // console.log(filteredPlayers);
     popupPlayers.classList.remove("hidden");
 
     // Add Cancel button
@@ -28,9 +30,18 @@ const appendPlayer = (button, playerSelected) => {
     cancelButtonContainer.innerHTML = `<button onclick="closePopupPlayers()"><i class="fa-regular fa-circle-xmark"></i></button>`;
     popupPlayers.appendChild(cancelButtonContainer);
 
-    filteredPlayers.forEach(player => {
+    filteredPlayers.forEach((player) => {
         const playerCard = document.createElement("div");
-        playerCard.className = "flex items-center p-3 border-b border-gray-300 cursor-pointer hover:bg-gray-100";
+        playerCard.data = player.name;
+        playerCard.dataset.playerName = playerCard.data;
+        playerCard.id = "toRemplace";
+        // playerCard.onclick = playerSelected;
+        playerCard.className =
+            "flex items-center p-3 border-b border-gray-300 cursor-pointer hover:bg-gray-100";
+
+        playerCard.addEventListener("click", () => {
+            playerSelected(player, button);
+        });
 
         playerCard.innerHTML = `
             <img src="${player.photo}" alt="${player.name}" class="w-12 h-12 rounded-full mr-4" />
@@ -44,16 +55,44 @@ const appendPlayer = (button, playerSelected) => {
     });
 };
 
+// changement de joueurs
+function playerSelected(selectedPlayer, targetButton) {
+    // console.log(selectedPlayer);
+    const newCard = document.createElement("div");
+    newCard.id = targetButton.id;
+    newCard.className =
+        "cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40";
+    newCard.innerHTML = `
+    <div class="mt-[15px] w-[100px] h-[90px] bg-cover bg-center bg-no-repeat bg-[url(${selectedPlayer.photo})] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+        </div>
+        <div class="leading-[15px]">
+            <div class="text-ellipsis w-16 text-nowrap overflow-hidden">${selectedPlayer.name}</div>
+            <div class="text-xs text-center text-white">${selectedPlayer.position} &nbsp;&nbsp; ${selectedPlayer.rating}</div>
+        </div>
+    `;
+    // targetButton.replaceWith(newCard);
+    popupPlayers.classList.add("hidden");
+
+    let newInfo = {
+        photo: selectedPlayer.photo,
+        name: selectedPlayer.name,
+        position: selectedPlayer.position,
+        rating: selectedPlayer.rating
+    };
+
+    chosingPlayers.push(newInfo);
+    
+}
 
 const closePopupPlayers = () => {
     popupPlayers.classList.add("hidden");
-}
+};
 
 // Add click events to terrain
 const addPlayerSelectionEvents = () => {
-    document.querySelectorAll("#toChange").forEach(button => {
+    document.querySelectorAll("#toChange").forEach((button) => {
         button.addEventListener("click", () => {
-                appendPlayer(button);
+            appendPlayer(button);
         });
     });
 };
