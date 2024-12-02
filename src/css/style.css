@@ -166,30 +166,3 @@ main {
     background-color: #2980b9;
   }
 }
-
-/* .player-infos {
-  background-image: url(../images/player.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 90px;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
-} */
-
-/* .player-card {
-  margin-top: 5px;
-  width: 90px;
-  height: 105px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/player.png);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-} */
