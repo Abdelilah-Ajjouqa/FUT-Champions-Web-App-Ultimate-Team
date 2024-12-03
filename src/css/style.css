@@ -16,17 +16,6 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width: 768px) {
-  .players-in-terrain {
-    margin-inline: auto;
-  }
-}
-
-main {
-  display: grid;
-  gap: 15px;
-}
-
 @media (min-width: 1024px) {
   main {
     grid-template-columns: 70% 30%;

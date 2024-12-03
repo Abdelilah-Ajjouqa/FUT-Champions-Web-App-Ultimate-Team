@@ -1,4 +1,3 @@
-const api = "";
 let playersData = [];
 let chosingPlayers = [];
 let popupPlayers = document.getElementById("popupPlayers");
@@ -10,7 +9,16 @@ fetch("/players.json")
     })
     .catch((error) => {
         console.error("Error fetching players data:", error);
+    })
+
+// Add click events to terrain
+const addPlayerSelectionEvents = () => {
+    document.querySelectorAll("#toChange").forEach((button) => {
+        button.addEventListener("click", () => {
+            appendPlayer(button);
+        });
     });
+}
 
 // popup players
 const appendPlayer = (button) => {
@@ -18,7 +26,6 @@ const appendPlayer = (button) => {
     const filteredPlayers = playersData.filter(
         (player) => player.position === position
     );
-
     popupPlayers.innerHTML = "";
 
     // console.log(filteredPlayers);
@@ -34,7 +41,7 @@ const appendPlayer = (button) => {
         const playerCard = document.createElement("div");
         playerCard.data = player.name;
         playerCard.dataset.playerName = playerCard.data;
-        playerCard.id = "toRemplace";
+        playerCard.id = "toChange";
         // playerCard.onclick = playerSelected;
         playerCard.className =
             "flex items-center p-3 border-b border-gray-300 cursor-pointer hover:bg-gray-100";
@@ -53,13 +60,24 @@ const appendPlayer = (button) => {
         `;
         popupPlayers.appendChild(playerCard);
     });
-};
+}
+
+// closing popup
+const closePopupPlayers = () => {
+    popupPlayers.classList.add("hidden");
+}
 
 // changement de joueurs
 function playerSelected(selectedPlayer, targetButton) {
     let newInfo;
     const newCard = document.createElement("div");
+
+    newCard.addEventListener("click", () => {
+        appendPlayer(newCard);
+    });
+
     newCard.id = targetButton.id;
+    newCard.dataset.position = targetButton.getAttribute("data-position");
     newCard.className =
         "cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40";
     newCard.innerHTML = `
@@ -85,14 +103,14 @@ function playerSelected(selectedPlayer, targetButton) {
 
     // detect the repeat-2
     let alreadyChoosen = false;
-    chosingPlayers.forEach(player =>{
-        if(player.name == selectedPlayer.name && player.rating == selectedPlayer.rating){
+    chosingPlayers.forEach(player => {
+        if (player.name == selectedPlayer.name && player.rating == selectedPlayer.rating) {
             alert("this player already in the terrain");
             alreadyChoosen = true;
             return;
         }
     });
-    if(alreadyChoosen){
+    if (alreadyChoosen) {
         return
     }
     targetButton.replaceWith(newCard);
@@ -106,22 +124,39 @@ function playerSelected(selectedPlayer, targetButton) {
     };
     chosingPlayers.push(newInfo);
 
-    newCard.addEventListener("click", ()=>{
-        addPlayerSelectionEvents();
-    })
+
+
 }
 
-const closePopupPlayers = () => {
-    popupPlayers.classList.add("hidden");
-};
+const addPlayerForm = document.querySelector("#addPlayerForm");
+const newPlayerName = document.getElementById("newPlayerName");
+const newPlayerPosition = document.getElementById("newPlayerPosition");
+const newPlayerRating = document.getElementById("newPlayerRating");
+const plusBtn = document.querySelector("#addForme");
 
-// Add click events to terrain
-const addPlayerSelectionEvents = () => {
-    document.querySelectorAll("#toChange").forEach((button) => {
-        button.addEventListener("click", () => {
-            appendPlayer(button);
-        });
-    });
-};
+// add New Player
+function addNewPlayer() {
+    const plusBtn = document.querySelector("#addForme");
+    plusBtn.classList.remove("hidden");
+}
 
+// save infos from theforme
+addPlayerForm.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (newPlayerRating.value < 50 || newPlayerRating.value > 99) {
+        alert("please enter an numeber between 50 and 99");
+    } else {
+        let infosObject = {
+            photo:'../src/images/player.png',
+            name: newPlayerName.value,
+            position: newPlayerPosition.value,
+            rating: newPlayerRating.value
+        }
+        playersData.push(infosObject);
+
+        console.log(infosObject);
+        plusBtn.classList.add("hidden");
+    }
+});
 addPlayerSelectionEvents();
