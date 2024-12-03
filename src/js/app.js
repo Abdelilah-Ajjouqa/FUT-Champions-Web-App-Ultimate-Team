@@ -57,7 +57,7 @@ const appendPlayer = (button) => {
 
 // changement de joueurs
 function playerSelected(selectedPlayer, targetButton) {
-    // console.log(selectedPlayer);
+    let newInfo;
     const newCard = document.createElement("div");
     newCard.id = targetButton.id;
     newCard.className =
@@ -70,18 +70,45 @@ function playerSelected(selectedPlayer, targetButton) {
             <div class="text-xs text-center text-white">${selectedPlayer.position} &nbsp;&nbsp; ${selectedPlayer.rating}</div>
         </div>
     `;
-    // targetButton.replaceWith(newCard);
+
+    // detect the repeat
+    // let alreadyChoosen = false;
+    // chosingPlayers.forEach(player => {
+    //     if(player.name == selectedPlayer.name && player.rating == selectedPlayer.rating){
+    //         alreadyChoosen = true;
+    //         return;
+    //     }
+    // })
+    // if(alreadyChoosen){
+    //     return;
+    // }
+
+    // detect the repeat-2
+    let alreadyChoosen = false;
+    chosingPlayers.forEach(player =>{
+        if(player.name == selectedPlayer.name && player.rating == selectedPlayer.rating){
+            alert("this player already in the terrain");
+            alreadyChoosen = true;
+            return;
+        }
+    });
+    if(alreadyChoosen){
+        return
+    }
+    targetButton.replaceWith(newCard);
     popupPlayers.classList.add("hidden");
 
-    let newInfo = {
+    newInfo = {
         photo: selectedPlayer.photo,
         name: selectedPlayer.name,
         position: selectedPlayer.position,
         rating: selectedPlayer.rating
     };
-
     chosingPlayers.push(newInfo);
-    
+
+    newCard.addEventListener("click", ()=>{
+        addPlayerSelectionEvents();
+    })
 }
 
 const closePopupPlayers = () => {
