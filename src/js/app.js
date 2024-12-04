@@ -81,7 +81,10 @@ function playerSelected(selectedPlayer, targetButton) {
         "cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40";
     newCard.innerHTML = `
     <div class="mt-[15px] w-[100px] h-[90px] bg-cover bg-center bg-no-repeat bg-[url(${selectedPlayer.photo})] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
-        </div>
+        <button id="supprimer" class="relative left-4 button-10">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    </div>
         <div class="leading-[15px]">
             <div class="text-ellipsis w-16 text-nowrap overflow-hidden">${selectedPlayer.name}</div>
             <div class="text-xs text-center text-white">${selectedPlayer.position} &nbsp;&nbsp; ${selectedPlayer.rating}</div>
