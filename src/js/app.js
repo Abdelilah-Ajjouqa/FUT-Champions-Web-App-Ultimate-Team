@@ -42,9 +42,8 @@ const appendPlayer = (button) => {
         playerCard.data = player.name;
         playerCard.dataset.playerName = playerCard.data;
         playerCard.id = "toChange";
-        // playerCard.onclick = playerSelected;
         playerCard.className =
-            "flex items-center p-3 border-b border-gray-300 cursor-pointer hover:bg-gray-100";
+            "flex items-center p-3 border-b rounded-md border-gray-300 cursor-pointer hover:bg-slate-600 hover:bg-opacity-80";
 
         playerCard.addEventListener("click", () => {
             playerSelected(player, button);
