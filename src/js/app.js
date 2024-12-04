@@ -80,15 +80,16 @@ function playerSelected(selectedPlayer, targetButton) {
     newCard.className =
         "cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40";
     newCard.innerHTML = `
+    
     <div class="mt-[15px] w-[100px] h-[90px] bg-cover bg-center bg-no-repeat bg-[url(${selectedPlayer.photo})] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
-        <button id="supprimer" class="relative left-4 button-10">
-            <i class="fa-solid fa-trash"></i>
-        </button>
     </div>
         <div class="leading-[15px]">
             <div class="text-ellipsis w-16 text-nowrap overflow-hidden">${selectedPlayer.name}</div>
             <div class="text-xs text-center text-white">${selectedPlayer.position} &nbsp;&nbsp; ${selectedPlayer.rating}</div>
         </div>
+        <button id="supprimer" class="relative left-16">
+            <i class="fa-solid fa-trash fa-1.5x hover:text-red-500"></i>
+        </button>
     `;
 
     // detect the repeat
@@ -126,9 +127,28 @@ function playerSelected(selectedPlayer, targetButton) {
     };
     chosingPlayers.push(newInfo);
 
-
-
+    const btnDelete = document.querySelector('#supprimer');
+    btnDelete.addEventListener('click', (e) => {
+        e.stopPropagation();
+        newCard.innerHTML = `
+        <div id ="toChange"
+                            class="cursor-pointer hover:scale-110 hover:duration-300 bg-[url(./src/images/players_background.webp)] bg-contain bg-center bg-no-repeat flex flex-col items-center text-white text-center text-xs rounded-lg h-40 w-40 ">
+                            <div class="mt-[5px] w-[90px] h-[105px] bg-cover bg-center bg-no-repeat bg-[url(./src/images/player.png)] flex flex-col justify-end items-center text-[white] [text-shadow:1px_1px_2px_black]">
+                            </div>
+                            <div class="leading-[15px]">
+                                <div class="text-ellipsis w-16 text-nowrap overflow-hidden">XXXXXXXXXXXXX</div>
+                                <div class="text-xs text-center text-white">LW &nbsp;&nbsp; 90</div>
+                            </div>
+                        </div>
+        `;
+        chosingPlayers.forEach((player) => {
+            if (player.name == newInfo.name) {
+                chosingPlayers = chosingPlayers.filter(player => player.name !== newInfo.name);
+            }
+        })
+    })
 }
+
 
 const addPlayerForm = document.querySelector("#addPlayerForm");
 const newPlayerName = document.getElementById("newPlayerName");
@@ -150,7 +170,7 @@ addPlayerForm.addEventListener("click", (e) => {
         alert("please enter an numeber between 50 and 99");
     } else {
         let infosObject = {
-            photo:'../src/images/player.png',
+            photo: '../src/images/player.png',
             name: newPlayerName.value,
             position: newPlayerPosition.value,
             rating: newPlayerRating.value
@@ -162,3 +182,4 @@ addPlayerForm.addEventListener("click", (e) => {
     }
 });
 addPlayerSelectionEvents();
+
