@@ -88,7 +88,7 @@ function playerSelected(selectedPlayer, targetButton) {
             <div class="text-xs text-center text-white">${selectedPlayer.position} &nbsp;&nbsp; ${selectedPlayer.rating}</div>
         </div>
         <button id="supprimer" class="relative left-16">
-            <i class="fa-solid fa-trash fa-1.5x hover:text-red-500"></i>
+            <i class="fa-solid fa-trash  hover:text-red-500  text-xl"></i>
         </button>
     `;
 
@@ -127,6 +127,8 @@ function playerSelected(selectedPlayer, targetButton) {
     };
     chosingPlayers.push(newInfo);
 
+
+    // delete Btn
     const btnDelete = document.querySelector('#supprimer');
     btnDelete.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -148,7 +150,6 @@ function playerSelected(selectedPlayer, targetButton) {
         })
     })
 }
-
 
 const addPlayerForm = document.querySelector("#addPlayerForm");
 const newPlayerName = document.getElementById("newPlayerName");
@@ -176,10 +177,14 @@ addPlayerForm.addEventListener("click", (e) => {
             rating: newPlayerRating.value
         }
         playersData.push(infosObject);
-
-        console.log(infosObject);
         plusBtn.classList.add("hidden");
     }
 });
-addPlayerSelectionEvents();
 
+// remove popup addNewPlayer
+const removePopup = document.querySelector("#removeFormeAddNewPlayer")
+removePopup.addEventListener("click", ()=>{
+    plusBtn.classList.add("hidden");
+})
+
+addPlayerSelectionEvents();
